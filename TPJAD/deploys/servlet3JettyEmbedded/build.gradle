@@ -1,0 +1,8 @@
+apply plugin: 'java'
+repositories { mavenCentral() }
+dependencies { implementation 'org.eclipse.jetty:jetty-server:9.4.3.v20170317',
+                       'org.eclipse.jetty:jetty-servlet:9.4.3.v20170317' }
+jar {
+    manifest { attributes 'Main-Class': 'JettyServer' }
+    from(configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) })
+}

@@ -1,0 +1,3 @@
+<?xml version='1.0' encoding='utf-8'?>
+  <!--  Context fragment for deploying ServletExample.war  -->
+  <Context path="" docBase="D:/Master Stuff/Github/TPJAD/Servlets/build/libs/Servlets.war" debug="0" privileged="true"/>
