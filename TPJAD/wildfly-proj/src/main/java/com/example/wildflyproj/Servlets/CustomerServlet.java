@@ -1,9 +1,8 @@
-package com.example.glassfishproj.Servlets;
+package com.example.wildflyproj.Servlets;
 
-import com.example.glassfishproj.Interfaces.VehicleService;
-import com.example.glassfishproj.Interfaces.CustomerService;
-import com.example.glassfishproj.Models.Vehicle;
-import com.example.glassfishproj.Models.Customer;
+import com.example.wildflyproj.Interfaces.VehicleService;
+import com.example.wildflyproj.Interfaces.CustomerService;
+import com.example.wildflyproj.Models.Customer;
 
 import jakarta.ejb.EJB;
 import jakarta.servlet.ServletException;
@@ -13,7 +12,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
 @WebServlet(name="customers", value = "/customers")
 public class CustomerServlet extends HttpServlet {

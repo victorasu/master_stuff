@@ -1,10 +1,10 @@
-package com.example.glassfishproj.Servlets;
+package com.example.wildflyproj.Servlets;
 
-import com.example.glassfishproj.Interfaces.CustomerService;
-import com.example.glassfishproj.Interfaces.VehicleService;
-import com.example.glassfishproj.Models.Customer;
+import com.example.wildflyproj.Interfaces.CustomerService;
+import com.example.wildflyproj.Interfaces.VehicleService;
+import com.example.wildflyproj.Models.Customer;
 
-import com.example.glassfishproj.Models.Vehicle;
+import com.example.wildflyproj.Models.Vehicle;
 import jakarta.ejb.EJB;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -80,26 +80,27 @@ public class MainServlet extends HttpServlet {
         out.println("<form action=\"vehicles\" method=\"post\">");
         out.println("<br><br>");
         out.println("<table>");
-        out.println("<tr><th>Make</th> <th>Model</th> <th>Price</th></tr>");
+        out.println("<tr><th>Make</th> <th>Model</th> <th>Price</th> <th>Buyer</th></tr>");
         try {
             List<Vehicle> vehicleList = beanVehicle.findAll();
             if (vehicleList.isEmpty())
                 throw new NullPointerException();
             for (Vehicle vehicle : vehicleList) {
-                if(vehicle.getCustomer() != null)
+                if(vehicle.getCustomer() != null) {
                     out.println(
-                        "<tr><td><a href=\"" + req.getContextPath() + "/vehicles?id=" + vehicle.getId_vehicle() + "\">" + vehicle.getMake() + "</a></td>" +
-                            "<td>"
-                                + vehicle.getModel() +
-                            "</td>" +
-                            "<td>"
-                                + vehicle.getPrice() +
-                            "</td>" +
-                            "<td>"
-                                + vehicle.getCustomer().getFirst_name() + " " + vehicle.getCustomer().getLast_name() +
-                            "</td>" +
-                        "</tr>");
-                else{
+                            "<tr><td><a href=\"" + req.getContextPath() + "/vehicles?id=" + vehicle.getId_vehicle() + "\">" + vehicle.getMake() + "</a></td>" +
+                                    "<td>"
+                                    + vehicle.getModel() +
+                                    "</td>" +
+                                    "<td>"
+                                    + vehicle.getPrice() +
+                                    "</td>" +
+                                    "<td>"
+                                    + vehicle.getCustomer().getFirst_name() + " " + vehicle.getCustomer().getLast_name() +
+                                    "</td>" +
+                                    "</tr>");
+                }
+                else {
                     out.println(
                             "<tr><td><a href=\"" + req.getContextPath() + "/vehicles?id=" + vehicle.getId_vehicle() + "\">" + vehicle.getMake() + "</a></td>" +
                             "<td>"
@@ -107,9 +108,6 @@ public class MainServlet extends HttpServlet {
                             "</td>" +
                             "<td>"
                             + vehicle.getPrice() +
-                            "</td>" +
-                            "<td>"
-                            + vehicle.getCustomer().getFirst_name() + " " + vehicle.getCustomer().getLast_name() +
                             "</td>" +
                             "</tr>");
                 }

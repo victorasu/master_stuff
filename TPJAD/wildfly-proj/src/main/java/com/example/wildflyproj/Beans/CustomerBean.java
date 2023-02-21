@@ -1,11 +1,10 @@
-package com.example.glassfishproj.Beans;
+package com.example.wildflyproj.Beans;
 
-import com.example.glassfishproj.Interfaces.CustomerService;
-import com.example.glassfishproj.Models.Vehicle;
-import com.example.glassfishproj.Models.Customer;
+import com.example.wildflyproj.Interfaces.CustomerService;
+import com.example.wildflyproj.Models.Vehicle;
+import com.example.wildflyproj.Models.Customer;
 
 import jakarta.ejb.Local;
-import jakarta.ejb.Remote;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.*;
 

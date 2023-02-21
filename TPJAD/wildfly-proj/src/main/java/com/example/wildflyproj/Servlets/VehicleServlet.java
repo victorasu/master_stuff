@@ -1,10 +1,9 @@
-package com.example.glassfishproj.Servlets;
+package com.example.wildflyproj.Servlets;
 
-import com.example.glassfishproj.Interfaces.VehicleService;
-import com.example.glassfishproj.Models.Customer;
-import com.example.glassfishproj.Models.Vehicle;
+import com.example.wildflyproj.Interfaces.VehicleService;
+import com.example.wildflyproj.Models.Customer;
+import com.example.wildflyproj.Models.Vehicle;
 
-import jakarta.ejb.EJB;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -34,7 +33,7 @@ public class VehicleServlet extends HttpServlet {
 //        JNDIProps.setProperty("org.omg.CORBA.ORBInitialHost", "localhost");
 //        JNDIProps.setProperty("org.omg.CORBA.ORBInitialPort", "8080");
         context = new InitialContext(JNDIProps);
-        Object object = context.lookup("java:global/glassfish-proj-1.0-SNAPSHOT/VehicleBean!com.example.glassfishproj.Interfaces.VehicleService");
+        Object object = context.lookup("java:global/wildfly-proj-1.0-SNAPSHOT/VehicleBean!com.example.wildflyproj.Interfaces.VehicleService");
         vehicleService = (VehicleService) object;
     }
 

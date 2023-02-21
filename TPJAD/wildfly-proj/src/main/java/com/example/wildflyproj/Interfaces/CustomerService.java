@@ -1,7 +1,7 @@
-package com.example.glassfishproj.Interfaces;
+package com.example.wildflyproj.Interfaces;
 
-import com.example.glassfishproj.Models.Vehicle;
-import com.example.glassfishproj.Models.Customer;
+import com.example.wildflyproj.Models.Vehicle;
+import com.example.wildflyproj.Models.Customer;
 
 import java.util.List;
 

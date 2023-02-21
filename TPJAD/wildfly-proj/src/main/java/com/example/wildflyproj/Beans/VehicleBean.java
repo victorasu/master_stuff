@@ -1,10 +1,9 @@
-package com.example.glassfishproj.Beans;
+package com.example.wildflyproj.Beans;
 
-import com.example.glassfishproj.Interfaces.VehicleService;
-import com.example.glassfishproj.Models.Vehicle;
+import com.example.wildflyproj.Interfaces.VehicleService;
+import com.example.wildflyproj.Models.Vehicle;
 
 import jakarta.ejb.Local;
-import jakarta.ejb.Remote;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;

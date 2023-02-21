@@ -1,0 +1,22 @@
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+html {
+    background-color: cadetblue;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+body {
+    background-color: cadetblue;
+    text-align: center;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
